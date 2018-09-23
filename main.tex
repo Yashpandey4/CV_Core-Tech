@@ -1,0 +1,263 @@
+\documentclass{article}
+
+\usepackage{verbatim}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,      % color of file links
+  }
+%\usepackage[scaled]{helvet}
+%\renewcommand*\familydefault{\sfdefault}
+
+\newenvironment{longversion}{}{} % use this to show longversion
+%\newenvironment{longversion}{\comment}{\endcomment} % use this to hide  longversion
+\newenvironment{shortversion}{}{} % use this to show shortversion
+%\newenvironment{shortversion}{\comment}{\endcomment} % use this to hide shortversion
+
+\usepackage{changepage}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{sectsty}
+\usepackage[letterpaper,margin=0.55in]{geometry}
+\pagestyle{empty}
+
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+%edit the section font and style
+\sectionfont{\normalfont\sectionrule{0pt}{0pt}{-4pt}{1pt}}
+
+%make all sections cap and first letter capital
+\newcommand{\tmpsection}[1]{}
+\let\tmpsection=\section
+\renewcommand{\section}[1]{\tmpsection*{\textsc{#1}}}
+
+%set the line spacing
+\setstretch{1.10}
+
+
+\begin{document}
+%TITLE
+
+
+\begin{center}
+ {\LARGE \textsc{Pratyush Pandey} }\\ 
+
+\end{center}
+
+	
+\begin{minipage}{.45\linewidth}
+\begin{flushleft}                           
+\textbf{Spohomore - Electrical Engineering} \\
+Indian Institute of Technology Delhi \\
++91-9820807802 
+\end{flushleft} 
+\end{minipage}
+\hfill
+\begin{minipage}{.45\linewidth}
+\begin{flushright}                                      
+yashpandey4@gmail.com  \\
+   \href{https://github.com/Yashpandey4}{github.com/Yashpandey4} \\
+  \href{https://www.linkedin.com/in/pratyush-pandey-b99b5b143/}{linkedin.com/in/pratyush-pandey-b99b5b143/}\\ 
+\end{flushright} 
+\end{minipage}
+
+\section{Academic Details}
+
+\begin{center}
+\begin{tabular}{ |c | c | c | c |}
+\hline
+Year & Degree & Institute & CGPA/Percentage \\ 
+\hline
+2017-2021 & B.Tech in Electrical & Indian Institute of Technology (IIT) & 9.588 \\ 
+\textbf{(Current)} &  and Electronics Engineering & Delhi & \textbf{Department Rank 4}\\
+\hline
+
+
+2017 & Class XII, HSC & \begin{tabular}{@{}c@{}}Ratanbai Walbai Junior College of Science, \\Mulund \end{tabular} & 90\% \\ 
+
+\hline
+2015 & Class X, ICSE & \begin{tabular}{@{}c@{}}Smt.Sulochanadevi Singhania School, \\Thane \end{tabular} & 98.2\% \\  \hline
+\end{tabular}
+\end{center}
+
+\section{Scholastic Achievements}
+\begin{itemize}
+    \setlength\itemsep{0.0em}
+    \item Secured a place \textbf{among Top 0.05\%} of the students in the IIT Joint Entrance Exam(IIT-JEE) out of  \textbf{more than 11,00,000} students who appeared for the examination.
+   % \item Awarded \textbf{Change of Department} after first year on CGPA based merit from Dept. of Textile Technology (in which I secured Department rank 2) to Dept. of Electrical Engineering.
+    \item Awarded certificate of merit for scoring in the \textbf{Top 7\%} of my batch, after securing the \textbf{Institute highest Perfect 10 GPA} in the second semester.
+    \item Inducted in \textbf{Sulonia Honour Society} Awarded to \textbf{top 1\% Students} of every batch for academic, extra-curricular and all round achievements.
+    \item Special mention in \textbf{Microsoft's Code.Fun.Do} campus wide Hackathon in 2018.
+    %\item Selected as \textbf{KVPY} Scholar in `Kishore Vaigyanik Protsahan Yojana' by Indian Institute of Science given to top 1\%.
+    
+\end{itemize}
+
+\section{Major Internships}
+% \begin{spacing}{1}
+\begin{list} {\labelitemi}{\leftmargin=0em}
+\setlength{\leftmargin}{0pt}
+
+    \item[]
+    \headerrow {\textbf{Siemens Ltd., Kalwa Works }}{Mr.Ravi Subramanium (IIT-B, IIM-A), May-July 2018}
+    Worked in Energy Management - Strategy division in Siemens, Kalwa. Received a \textbf{Letter of Recommendation} from the supervisor and head of division, Mr.Ravi Subramanium.
+    \begin{itemize}
+    \setlength\itemsep{0.0em}
+        \item Worked in the Futureland team, a Siemens initiative \href{https://www.siemens.com/global/en/home/company/fairs-events/futureland.html}{(link)} involving 6 focus topics, namely - Mindsphere, Digital Twins and simulations, blockchain, ML-AI, Cybersecurity, IoT and Industry 4.0.
+        \item Held Training sessions and workshops on the focus topics to sensitized \textbf{3100 Workers} and \textbf{500 Executives} across various departments about how they could incorporate new technologies to increase productivity from business-as-usual. 
+        \item Provided a model for predictive maintenance of motors using machine learning by judging various factors like noise, vibrations and temperatures post production. Received recognition from factory head for work done. Detailed Report of the work is present \href{https://csciitd-my.sharepoint.com/:b:/g/personal/ee1170938_csciitd_onmicrosoft_com/EasUavDrTmdFrvuYc0rOissBYh8X1WvKKr_OTclVrCd42w?e=wCPjfb}{here}.
+    \item Also worked in Siemens motor factory to understand their product development, supply chain logistics and post sales support. 
+    \end{itemize}
+
+    \item[]
+    \headerrow {\textbf{Data Structures Intern}}{Prof. Maya Ramanath, May-July 2018}
+    Work appreciated by Professor, Received \textbf{Letter of Recommendation} and \textbf{Semester Credits} for the same. A link to the project is \href{https://github.com/Yashpandey4/BTree_Vis}{here}
+    \begin{itemize}
+    \setlength\itemsep{0.0em}
+        \item Built software for generating interactive graphical simulations of the BTree, B*Tree, and B+Tree data structures used in Database Management Systems. The link to the project is \href{https://github.com/Yashpandey4/BTree_Vis}{here}.
+        \item Employed addition, deletion, search, and traverse operations, added support for tree of any degree \textgreater=2.
+        \item Used the external JGraphX,  library to render graphics and animate the above operations.
+        \item Experimented with JavaFX to render animations, Explored it's application in areas like debugging complex database storage systems by visualization.
+    \end{itemize}
+
+     
+
+\end{list}
+% \end{spacing}
+
+\begin{absolutelynopagebreak}
+\begin{longversion}
+\section{Major Projects}
+\begin{list} {\labelitemi}{\leftmargin=0em}
+\setlength{\leftmargin}{0pt}
+% \setlength\itemsep{5em}
+%\begin{itemize}
+
+\item[]
+\headerrow { \textbf{Tumour Detection in Brain Using Pre-Processing of MRI images}} {Prof. SD Joshi, July 2018 - Present}
+ \begin{itemize} \item[]
+Performed image enhancement and noise reduction
+techniques on MRI images, then applied morphological operations to detect the tumor in the image. In the end the tumour was mapped onto
+the original gray scale image with 255 intensity to make
+visible the tumour in the image.
+The algorithm used had two stages, first is pre-processing by converting to gray-scale image then applying high pass and median filters for image enhancement and noise reduction, and after that computing the threshhold and watershed segmentation, and finally performing morphological operations. A detailed project report can be found  \href{https://drive.google.com/file/d/1SlMhfu_FqdmNmo-ZZoaVuqLGvVw4tHOT/view?usp=sharing}{here}.
+ \end{itemize}
+ 
+ \headerrow { \textbf{Tracking Motion and Behavioural Patterns of Fishes}} {Prof. Aditi, August 2018 - Present}
+ \begin{itemize} \item[]
+ Worked with the Samsung Innovations lab in IIT Delhi to study a correlation between the random motion of fishes during different times of day and guess their behavioral patterns. Different species of fishes are being studied in tanks of different sizes and depth. The data is recorded via Kinect Studio and Processed and Analysed via MATLAB to find behavioral patterns and their correlations with the surrounding condition, in hope to obtain insight over thinking process of fishes. Phase 2 of the project to begin in October, 2018.
+ \end{itemize}
+
+ \item[]
+\headerrow { \textbf{Cell Phone Detector Circuit}} {Prof. Shouribrata Chatterjee, Jan - Mar 2018}
+ \begin{itemize} \item[]
+ Designed and developed a circuit which can detect Cell-Phones operational in a 10 meter radius by amplifying the specific long range signals emitted by them using high frequency chokes. Incorporated Schottky diode to rectify low frequency AC signal and ceramic capacitor to filter out AC ripples. BJT was used to amplify the signal and in conjunction with a Comparator to um-ambiguously detect a cell-phone signal.
+ \end{itemize}
+ 
+\headerrow { \textbf{Affordable Energy Generator}} {Prof. PVM Rao, July - Dec 2017}
+ \begin{itemize} \item[]
+ Designed and assembled a Cheap, Clean and Efficient electricity generator from scratch using a dynamo, a bicycle wheel and a step up transformer to store this energy. The design of the product was not patented and it can be manufactured for less than 100 rupees to provide cheap power to those living in rural areas in India. A presentation to the project is \href{https://csciitd-my.sharepoint.com/:p:/g/personal/ee1170938_csciitd_onmicrosoft_com/EaSyGhWUxVlJg2bV1XZGJvAB0vl_h_SEt4NfQzvOdwgxYQ?e=KFC30i}{here}.
+ \end{itemize}
+
+% \headerrow {\textbf{Content Intern, Indian Road Safety Campaign}} {NEN201 Internship, March-April, 2018}
+% \begin{itemize} \item[]
+% NEN201 is a Professional Ethics and Social Responsibility Course, which requires us to volunteer in an Non-Government Organisation. Indian Road Safety Campaign \href{https://www.road-safety.co.in/}{(link)} is the largest youth led organisation in India. As a part of my intern we visited various part of Delhi and Mumbai to conduct various events and spread awareness about safety on road, all in collaboration with the Delhi Traffic Police. Being the content writer, I managed their official Social Media Handles, blogs and Newsletters to spread awareness about the same. Direct outreach exceeds \textbf{1 Million People} who are influenced by awareness campaigns every year.
+% \end{itemize}
+
+\item[]
+\headerrow {\textbf{Apocalypse}} {Independent Project, May - Dec 2017}
+\begin{itemize} \item[]
+Created A Windows/Mac/Linux Game made for PC on Unity. It is a survival game coded in C\#. A link to project is \href{https://github.com/Yashpandey4/Apocalypse-the-game}{here}.
+\end{itemize}
+
+\end{list}
+%\end{itemize}
+
+% \pagebreak
+
+% \textit{*All projects are available in my github profile}
+\end{longversion}
+
+% \begin{longversion}
+% \section{Relevant Courses}
+% \begin{itemize}
+% \setlength\itemsep{-1em}
+% \item \textbf{Computer Science:} \hfill \textit{(*Courses currently pursuing)}\\
+% Introduction to Computer Science; Algorithms and Data Structures in Java*\\
+
+% \item \textbf{Electrical:}
+% Introduction to Electrical Engineering; Physical Electronics*; Signals and Systems*; Electromagnetism*; Circuit Theory* \\ 
+% \item \textbf{Mathematics:} Calculus, Linear Algebra, Differential Equations, Probability, Discrete Structures*\\
+
+% \item \textbf{Online:}
+% Deep Learning (\href{http://www.fast.ai/}{Fast.ai}), Intro to CS (CS50, Harvard), Stanford's Machine Learning by Andrew NG
+% \end{itemize}
+% % \textit{*Courses currently pursuing}
+% \end{longversion}
+
+
+\section{Extra Curricular Activities}
+%\setlength{\leftmargin}{0pt}
+
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item \textbf{Executive} at Training and Placement Cell, IIT Delhi \href{https://tnp.iitd.ac.in/newtnp/}{(link)}
+    \item \textbf{Representative} at the Debating Club, Board of Recreational and Cultural Activities, IIT Delhi \href{http://brca.iitd.ac.in/}{(link)} for Kumaon Hostel.
+    \item \textbf{Journalist} at Board of Student Publications, IIT Delhi. \href{http://bsp.iitd.ac.in/}{(link)}
+    \item \textbf{Content Writer} at The Titanic App \href{http://titanicapp.co/}{(link)}, a startup.
+    \item \textbf{Content Designer and Core Team Member} at Indian Road Safety Campaign \href{https://www.road-safety.co.in/}{(link)}, India's largest youth led organisation.
+    \item \textbf{Campus Ambassador} at Pravega \href{http://pravega.org/}{(link)}, responsible for all the technical back-end of the cultural festival.
+    \item \textbf{Volunteer} at BloodConnect, IIT Delhi \href{http://www.bloodconnect.org/}{(link)}
+    
+\end{itemize}
+
+
+\begin{longversion}
+\section{Technical Skills}\begin{itemize}
+\item \textbf{Programming Languages:}  \CPP, Python, Java, MATLAB, OCaml, C\#.
+\item \textbf{Frameworks:} Django, JGraphX, Flask, JavaFX
+\item \textbf{Programming Environments:} Git, Android Studio, LaTeX, Visual Studio, IntelliJ Idea
+
+\end{itemize}
+
+\end{longversion}
+
+
+\end{absolutelynopagebreak}
+
+
+\end{document}
+
